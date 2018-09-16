@@ -1,3 +1,5 @@
+// test
+#define STATE_ERROR -1
 #define STATE_IDLE  0
 #define STATE_FORE  1
 #define STATE_BACK  2
@@ -28,7 +30,7 @@ void setup() {
   pinMode(M_R_F, OUTPUT);
   pinMode(M_R_B, OUTPUT);
   
-  randomSeed(analogRead(0))
+  randomSeed(analogRead(0));
 }
 
 void loop() {
