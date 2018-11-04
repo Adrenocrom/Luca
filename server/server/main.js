@@ -30,9 +30,9 @@ httpsServer.listen(HTTPS_PORT, "0.0.0.0");
 console.log("server startet ... ");
 
 var motor1f = new Gpio(4, 'out');
-var motor1b = new Gpio(4, 'out');
-var motor2f = new Gpio(4, 'out');
-var motor2b = new Gpio(4, 'out');
+//var motor1b = new Gpio(4, 'out');
+//var motor2f = new Gpio(4, 'out');
+//var motor2b = new Gpio(4, 'out');
 
 var motorsInterval = setInterval(runMotors, 250); //run the blinkLED function every 250ms
 
@@ -45,7 +45,7 @@ function runMotors() { //function to start blinking
 }
 
 function endBlink() { //function to stop blinking
-	clearInterval(blinkInterval); // Stop blink intervals
+	clearInterval(runMotors); // Stop blink intervals
 	motor1f.writeSync(0); // Turn LED off
 	motor1f.unexport(); // Unexport GPIO to free resources
 }
