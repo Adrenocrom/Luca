@@ -6,6 +6,9 @@
 #define STATE_LEFT  3
 #define STATE_RIGHT 4
 
+#define US_STATE_SEND 0
+#define US_STATE_RECV 1
+
 #define M_L_F 2
 #define M_L_B 8
 
@@ -20,6 +23,7 @@ long distance = 0;
 int state = 0;
 long randNumber;
 
+
 void setup() {
   Serial.begin (9600); 
   pinMode(US_TRIGGER, OUTPUT); 
@@ -33,7 +37,21 @@ void setup() {
   randomSeed(analogRead(0));
 }
 
+
+struct SDelay {
+  long previous;
+  long interval;
+};
+
+
 void loop() {
+    unsigned long currentMillis = millis();
+
+
+
+
+
+
   digitalWrite(US_TRIGGER, LOW); 
   delay(5); 
   digitalWrite(US_TRIGGER, HIGH); 
