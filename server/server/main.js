@@ -45,7 +45,7 @@ function runMotors() { //function to start blinking
 }
 
 function endBlink() { //function to stop blinking
-	clearInterval(runMotors); // Stop blink intervals
+	clearInterval(motorsInterval); // Stop blink intervals
 	motor1f.writeSync(0); // Turn LED off
 	motor1f.unexport(); // Unexport GPIO to free resources
 }
