@@ -1,0 +1,17 @@
+{
+	"name": "Luca-Server",
+	"version": "0.0.1",
+	"description": "simple webserver",
+	"main": "main.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adrenocrom/Luca.git"
+	},
+	"author": "Josef Schulz",
+	"license": "MIT",
+	"dependencies": {
+		"ws": "^3.3.2",
+		"webcam-http-streaming": "^1.1.2"
+	}
+}
